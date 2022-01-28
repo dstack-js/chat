@@ -1,45 +1,10 @@
-/* eslint-disable node/no-extraneous-import */
 /* eslint-disable no-process-exit */
 /* eslint-disable unicorn/no-process-exit */
-import {create} from '@dstack-js/ipfs'
-import {Stack} from '@dstack-js/lib'
-import {PubSub} from '@dstack-js/lib/src/pubsub'
-const wrtc = require('wrtc')
 import * as blessed from 'blessed'
-
-interface Message {
-  nickname?: string;
-  message: string;
-}
+import {getStack} from './stack'
 
 export const run = async (room: string, nickname?: string) => {
-  const ipfs = await create({
-    repo: process.env.IPFS_REPO,
-    relay: {
-      enabled: true, // enable relay dialer/listener (STOP)
-      hop: {
-        enabled: true, // make this node a relay (HOP)
-      },
-    },
-    config: {
-      Addresses: {
-        Swarm: ['/ip4/0.0.0.0/tcp/0', '/dns4/dstack-relay.herokuapp.com/tcp/443/wss/p2p-webrtc-star'],
-      },
-      Discovery: {
-        MDNS: {
-          Enabled: true,
-          Interval: 1,
-        },
-        webRTCStar: {
-          Enabled: true,
-        },
-      },
-      Bootstrap: ['/dns4/dstack-relay.herokuapp.com/tcp/443/wss/p2p-webrtc-star/p2p/QmV2uXBKbii29iJKHKVy8sx5m49qdDTBYNybVoa5uLJtrf'],
-    },
-  }, wrtc)
-
-  const stack = await Stack.create('dstack-chat', ipfs)
-  const pubsub = stack.pubsub as PubSub<Message>
+  const {ipfs, stack, pubsub} = await getStack()
 
   const screen = blessed.screen({
     smartCSR: true,
@@ -129,7 +94,7 @@ export const run = async (room: string, nickname?: string) => {
     }
 
     try {
-      await pubsub.publish('chat', {nickname, message})
+      await pubsub.publish(room, {nickname, message})
     } catch {
       // error handling
     } finally {
@@ -146,21 +111,14 @@ export const run = async (room: string, nickname?: string) => {
   screen.append(input)
   input.focus()
 
-  await pubsub.subscribe('chat', event => {
+  await pubsub.subscribe(room, event => {
     messageList.addItem(`${event.data.nickname ? `${event.data.nickname} (${event.from.slice(-5)})` : event.from.slice(-5)}: ${event.data.message}`)
     messageList.scrollTo(100)
     screen.render()
   })
 
-  stack.onPeerConnect(async peer => {
-    messageList.setLabel(` Messages #${room} - Peers: ${await pubsub.peers('chat')} `)
-    messageList.addItem(`dstack: peer connected ${peer.id.slice(-5)}`)
-    messageList.scrollTo(100)
-    screen.render()
-  })
-
   setInterval(async () => {
-    messageList.setLabel(` Messages #${room} - Peers: ${await pubsub.peers('chat')} `)
+    messageList.setLabel(` Messages #${room} - Peers: ${await pubsub.peers(room)} `)
     screen.render()
   }, 1000)
 
