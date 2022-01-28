@@ -6,6 +6,7 @@ import {Stack} from '@dstack-js/lib'
 import {PubSub} from '@dstack-js/lib/src/pubsub'
 const wrtc = require('wrtc')
 import * as blessed from 'blessed'
+import {notify} from 'node-notifier'
 
 interface Message {
   nickname?: string;
@@ -147,7 +148,16 @@ export const run = async (room: string, nickname?: string) => {
   input.focus()
 
   await pubsub.subscribe('chat', event => {
-    messageList.addItem(`${event.data.nickname ? `${event.data.nickname} (${event.from.slice(-5)})` : event.from.slice(-5)}: ${event.data.message}`)
+    const name = event.data.nickname ? `${event.data.nickname} (${event.from.slice(-5)})` : event.from.slice(-5)
+    messageList.addItem(`${name}: ${event.data.message}`)
+
+    try {
+      if (event.from !== stack.id) notify({
+        title: `Peerchat #${room} | ${name}`,
+        message: event.data.message,
+      })
+    } catch {}
+
     messageList.scrollTo(100)
     screen.render()
   })

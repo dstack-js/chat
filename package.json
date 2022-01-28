@@ -15,6 +15,7 @@
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
     "blessed": "^0.1.81",
+    "node-notifier": "^10.0.0",
     "tslib": "^1",
     "wrtc": "^0.4.7"
   },
@@ -22,6 +23,7 @@
     "@oclif/dev-cli": "^1",
     "@types/blessed": "^0.1.19",
     "@types/node": "^17.0.13",
+    "@types/node-notifier": "^8.0.2",
     "eslint": "^7.32.0",
     "eslint-config-oclif": "^3.1.2",
     "eslint-config-oclif-typescript": "^0.2.0",
