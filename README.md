@@ -13,9 +13,8 @@ _Recording looks ugly, but in terminal it seems to be fine_
 [![License](https://img.shields.io/npm/l/peerchat.svg)](https://github.com/dstack-js/chat/blob/master/package.json)
 
 <!-- toc -->
-- [peerchat](#peerchat)
-- [Usage](#usage)
-- [Commands](#commands)
+* [Usage](#usage)
+* [Commands](#commands)
 <!-- tocstop -->
 # Usage
 <!-- usage -->
@@ -24,22 +23,10 @@ $ npm install -g peerchat
 $ peerchat COMMAND
 running command...
 $ peerchat (-v|--version|version)
-peerchat/0.0.1 darwin-x64 node-v16.13.1
+peerchat/0.0.2 darwin-x64 node-v16.13.1
 $ peerchat --help [COMMAND]
 USAGE
-  $ peerchat [ROOM] [NICKNAME]
-
-ARGUMENTS
-  ROOM      [default: dstack] chat room
-  NICKNAME  your nickname
-
-OPTIONS
-  -v, --version  show CLI version
-
-EXAMPLES
-  $ peerchat
-  $ peerchat ROOM NICKNAME
-  $ peerchat dstack myCoolNickname
+  $ peerchat COMMAND
 ...
 ```
 <!-- usagestop -->
