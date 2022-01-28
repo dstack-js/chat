@@ -3,6 +3,8 @@ peerchat
 
 Peer-to-peer terminal chat based on [DStack](https://github.com/dstack-js/dstack)
 
+Checkout [DStack blog post](https://dstack.0x77.dev/blog/peerchat) to learn more
+
 ![Demo](docs/demo.svg)
 
 _Recording looks ugly, but in terminal it seems to be fine_
