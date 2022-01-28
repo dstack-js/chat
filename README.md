@@ -19,7 +19,7 @@ $ npm install -g peerchat
 $ peerchat COMMAND
 running command...
 $ peerchat (-v|--version|version)
-peerchat/0.0.0 darwin-x64 node-v16.13.1
+peerchat/0.0.1 darwin-x64 node-v16.13.1
 $ peerchat --help [COMMAND]
 USAGE
   $ peerchat COMMAND
