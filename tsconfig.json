@@ -4,14 +4,14 @@
     "importHelpers": true,
     "module": "commonjs",
     "outDir": "lib",
-    "rootDir": "src",
     "esModuleInterop": true,
+    "rootDir": "src",
     "strict": true,
-    "target": "es2017",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "target": "ESNext",
+    "lib": ["ESNext"]
   },
   "include": [
     "src/**/*"
-  ],
-  "exclude": ["node_modules"]
+  ]
 }
