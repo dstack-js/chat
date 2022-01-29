@@ -30,7 +30,6 @@ yarn global add peerchat
 
 <!-- toc -->
 * [Installing](#installing)
-* [or using yarn:](#or-using-yarn)
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
@@ -41,7 +40,7 @@ $ npm install -g peerchat
 $ peerchat COMMAND
 running command...
 $ peerchat (-v|--version|version)
-peerchat/0.1.1 darwin-x64 node-v16.13.1
+peerchat/0.1.2 darwin-x64 node-v16.13.1
 $ peerchat --help [COMMAND]
 USAGE
   $ peerchat COMMAND
@@ -75,7 +74,7 @@ EXAMPLES
   $ peerchat dstack myCoolNickname
 ```
 
-_See code: [src/commands/index.ts](https://github.com/dstack-js/chat/blob/v0.1.1/src/commands/index.ts)_
+_See code: [src/commands/index.ts](https://github.com/dstack-js/chat/blob/v0.1.2/src/commands/index.ts)_
 
 ## `peerchat discord [ROOM]`
 
@@ -97,7 +96,7 @@ EXAMPLES
   $ CHANNEL_ID="<discord channel id>" DISCORD_KEY="<discord bot token>" peerchat discord dstack
 ```
 
-_See code: [src/commands/discord/index.ts](https://github.com/dstack-js/chat/blob/v0.1.1/src/commands/discord/index.ts)_
+_See code: [src/commands/discord/index.ts](https://github.com/dstack-js/chat/blob/v0.1.2/src/commands/discord/index.ts)_
 
 ## `peerchat help [COMMAND]`
 
