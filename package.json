@@ -1,7 +1,7 @@
 {
   "name": "peerchat",
   "description": "Peer-to-peer terminal chat",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "author": "Mykhailo Marynenko @0x77dev",
   "bin": {
     "peerchat": "./bin/run",
