@@ -1,14 +1,12 @@
-/* eslint-disable no-process-exit */
-/* eslint-disable unicorn/no-process-exit */
 import * as blessed from 'blessed'
-import {getStack} from './stack'
+import { getStack } from './stack'
 
 export const run = async (room: string, nickname?: string) => {
-  const {ipfs, stack, pubsub} = await getStack()
+  const { ipfs, stack, pubsub } = await getStack()
 
   const screen = blessed.screen({
     smartCSR: true,
-    title: `#${room}`,
+    title: `#${room}`
   })
 
   const messageList = blessed.list({
@@ -23,8 +21,8 @@ export const run = async (room: string, nickname?: string) => {
     items: [
       'dstack: connected',
       `dstack: your id is ${stack.id.slice(-5)}`,
-      'dstack: use /help to see commands',
-    ],
+      'dstack: use /help to see commands'
+    ]
   })
 
   // Append our box to the screen.
@@ -36,7 +34,7 @@ export const run = async (room: string, nickname?: string) => {
     label: ` ID: ${stack.id.slice(-5)} `,
     padding: {
       top: 1,
-      left: 2,
+      left: 2
     },
     style: {
       fg: '#787878',
@@ -44,9 +42,9 @@ export const run = async (room: string, nickname?: string) => {
 
       focus: {
         fg: '#f6f6f6',
-        bg: '#353535',
-      },
-    },
+        bg: '#353535'
+      }
+    }
   })
 
   input.key('enter', async function () {
@@ -61,7 +59,7 @@ export const run = async (room: string, nickname?: string) => {
     }
 
     if (message.startsWith('/addr')) {
-      const {addresses} = await ipfs.id()
+      const { addresses } = await ipfs.id()
 
       for (const addr of addresses) {
         messageList.addItem(`dstack: ${addr.toString()}`)
@@ -94,7 +92,7 @@ export const run = async (room: string, nickname?: string) => {
     }
 
     try {
-      await pubsub.publish(room, {nickname, message})
+      await pubsub.publish(room, { nickname, message })
     } catch {
       // error handling
     } finally {

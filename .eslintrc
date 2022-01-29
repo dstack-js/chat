@@ -1,10 +1,13 @@
 {
   "extends": [
     "oclif",
-    "oclif-typescript"
+    "oclif-typescript",
+    "standard"
   ],
   "root": true,
   "rules": {
-    "node/no-missing-import": 1
+    "node/no-missing-import": "off",
+    "unicorn/no-process-exit": "off",
+    "no-process-exit": "off"
   }
 }

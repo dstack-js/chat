@@ -1,38 +1,38 @@
-import {Command, flags} from '@oclif/command'
+import { Command, flags } from '@oclif/command'
 import PeerChat from '..'
-import {getStack} from '../../services/stack'
-import Discord, {Intents} from 'discord.js'
+import { getStack } from '../../services/stack'
+import Discord, { Intents } from 'discord.js'
 
 class DiscordRelay extends Command {
-  static description = 'Peerchat <-> Discord'
+  static description = 'Peerchat/Discord relay'
 
   static flags = {
-    version: flags.version({char: 'v'}),
+    version: flags.version({ char: 'v' })
   }
 
   static examples = [
-    '$ peerchat discord',
-    '$ peerchat discord [ROOM]',
-    '$ peerchat discord dstack',
+    '$ CHANNEL_ID="<discord channel id>" DISCORD_KEY="<discord bot token>" peerchat discord',
+    '$ CHANNEL_ID="<discord channel id>" DISCORD_KEY="<discord bot token>" peerchat discord [ROOM]',
+    '$ CHANNEL_ID="<discord channel id>" DISCORD_KEY="<discord bot token>" peerchat discord dstack'
   ]
 
-  static args = [{name: 'room', default: PeerChat.args[0].default, description: 'chat room'}]
+  static args = [{ name: 'room', default: PeerChat.args[0].default, description: 'chat room' }]
 
   async run() {
-    const {args} = this.parse(DiscordRelay)
+    const { args } = this.parse(DiscordRelay)
 
     if (!process.env.DISCORD_KEY) {
       throw new Error('DISCORD_KEY env is missing')
     }
 
-    const {pubsub} = await getStack()
-    const client = new Discord.Client({intents: [Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILDS, Intents.FLAGS.DIRECT_MESSAGES]})
+    const { pubsub } = await getStack()
+    const client = new Discord.Client({ intents: [Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILDS, Intents.FLAGS.DIRECT_MESSAGES] })
     await client.login(process.env.DISCORD_KEY)
 
     client.on('message', async msg => {
       if (msg.author.bot) return
 
-      await pubsub.publish(args.room, {nickname: msg.author.tag, message: msg.content})
+      await pubsub.publish(args.room, { nickname: msg.author.tag, message: msg.content })
     })
 
     await pubsub.subscribe(args.room, async event => {

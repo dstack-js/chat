@@ -1,0 +1,12 @@
+{
+  "cSpell.words": [
+    "dstack",
+    "ipfs",
+    "libp2p"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+}

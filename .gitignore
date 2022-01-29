@@ -1,8 +1,6 @@
-*-debug.log
-*-error.log
-/.nyc_output
+*.log
 /dist
 /lib
-/package-lock.json
 /tmp
 node_modules
+.DS_Store
