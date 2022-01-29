@@ -15,7 +15,6 @@ Zero configuration peer-to-peer terminal chat with built-in end-to-end encryptio
 
 ```console
 npm i -g peerchat
-# or using yarn:
 yarn global add peerchat
 ```
 
