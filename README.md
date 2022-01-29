@@ -11,6 +11,24 @@ Zero configuration peer-to-peer terminal chat with built-in end-to-end encryptio
 [![Downloads/week](https://img.shields.io/npm/dw/peerchat.svg)](https://npmjs.org/package/peerchat)
 [![License](https://img.shields.io/npm/l/peerchat.svg)](https://github.com/dstack-js/chat/blob/master/package.json)
 
+# Installing
+
+```console
+npm i -g peerchat
+# or using yarn:
+yarn global add peerchat
+```
+
+on M1:
+
+```console
+yarn global add git+https://github.com/dstack-js/node-webrtc.git
+yarn global add peerchat
+```
+
+
+---
+
 <!-- toc -->
 * [Usage](#usage)
 * [Commands](#commands)
