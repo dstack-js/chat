@@ -21,10 +21,8 @@ yarn global add peerchat
 on M1:
 
 ```console
-yarn global add git+https://github.com/dstack-js/node-webrtc.git
 yarn global add peerchat
 ```
-
 
 ---
 
