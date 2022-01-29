@@ -18,12 +18,6 @@ npm i -g peerchat
 yarn global add peerchat
 ```
 
-on M1:
-
-```console
-yarn global add peerchat
-```
-
 ---
 
 <!-- toc -->
