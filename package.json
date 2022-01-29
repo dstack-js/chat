@@ -7,6 +7,9 @@
     "peerchat": "./bin/run",
     "pchat": "./bin/run"
   },
+  "resolutions": {
+    "wrtc": "git+https://github.com/dstack-js/node-webrtc.git"
+  },
   "bugs": "https://github.com/dstack-js/chat/issues",
   "dependencies": {
     "@dstack-js/ipfs": "^0.2.22",
