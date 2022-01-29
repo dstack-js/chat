@@ -2,7 +2,8 @@ import * as blessed from 'blessed'
 import { getStack } from './stack'
 
 export const run = async (room: string, nickname?: string) => {
-  const { ipfs, stack, pubsub } = await getStack()
+  const { ipfs, stack } = await getStack()
+  const { id, pubsub } = stack
 
   const screen = blessed.screen({
     smartCSR: true,
@@ -20,7 +21,7 @@ export const run = async (room: string, nickname?: string) => {
     left: 0,
     items: [
       'dstack: connected',
-      `dstack: your id is ${stack.id.slice(-5)}`,
+      `dstack: your id is ${id.slice(-5)}`,
       'dstack: use /help to see commands'
     ]
   })
@@ -31,7 +32,7 @@ export const run = async (room: string, nickname?: string) => {
     height: '10%',
     inputOnFocus: true,
     clickable: true,
-    label: ` ID: ${stack.id.slice(-5)} `,
+    label: ` ID: ${id.slice(-5)} `,
     padding: {
       top: 1,
       left: 2
@@ -101,8 +102,12 @@ export const run = async (room: string, nickname?: string) => {
     }
   })
 
-  screen.key(['escape', 'q', 'C-c'], function () {
-    return process.exit(0)
+  screen.key(['escape', 'q', 'C-c'], () => {
+    process.exit(0)
+  })
+
+  input.key(['C-c'], () => {
+    process.exit(0)
   })
 
   screen.append(messageList)

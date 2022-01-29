@@ -25,7 +25,9 @@ class DiscordRelay extends Command {
       throw new Error('DISCORD_KEY env is missing')
     }
 
-    const { pubsub } = await getStack()
+    const { stack } = await getStack()
+    const { pubsub } = stack
+
     const client = new Discord.Client({ intents: [Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILDS, Intents.FLAGS.DIRECT_MESSAGES] })
     await client.login(process.env.DISCORD_KEY)
 

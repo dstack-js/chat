@@ -1,6 +1,6 @@
 import { create } from '@dstack-js/ipfs'
 import { Stack } from '@dstack-js/lib'
-import type { PubSub } from '@dstack-js/lib/src/pubsub'
+
 const wrtc = require('wrtc')
 
 interface Message {
@@ -38,7 +38,6 @@ export const getStack = async () => {
   }, wrtc)
 
   const stack = await Stack.create('dstack-chat', ipfs)
-  const pubsub = stack.pubsub as PubSub<Message>
 
-  return { pubsub, stack, ipfs }
+  return { stack: stack as Stack<Message>, ipfs }
 }
