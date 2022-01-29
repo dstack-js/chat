@@ -21,11 +21,8 @@ yarn global add peerchat
 on M1:
 
 ```console
-brew install cmake
-yarn global add git+https://github.com/dstack-js/node-webrtc.git
 yarn global add peerchat
 ```
-
 
 ---
 
