@@ -3,10 +3,10 @@ Peerchat
 
 Zero configuration peer-to-peer terminal chat with built-in end-to-end encryption working on [DStack](https://github.com/dstack-js/dstack)
 
-[Checkout blog post for more info](https://dstack.0x77.dev/blog/peerchat)
+[Checkout blog post for more info](https://dstack.dev/blog/peerchat)
 
 [![asciicast](https://asciinema.org/a/465056.svg)](https://asciinema.org/a/465056)
-[![dstack](https://dstack.0x77.dev/img/badge.svg)](https://dstack.0x77.dev)
+[![dstack](https://dstack.dev/img/badge.svg)](https://dstack.dev)
 [![Version](https://img.shields.io/npm/v/peerchat.svg)](https://npmjs.org/package/peerchat)
 [![Downloads/week](https://img.shields.io/npm/dw/peerchat.svg)](https://npmjs.org/package/peerchat)
 [![License](https://img.shields.io/npm/l/peerchat.svg)](https://github.com/dstack-js/chat/blob/master/package.json)
