@@ -12,7 +12,7 @@
   },
   "bugs": "https://github.com/dstack-js/chat/issues",
   "dependencies": {
-    "@dstack-js/ipfs": "^0.2.22",
+    "@dstack-js/ipfs": "^0.2.29",
     "@dstack-js/lib": "^0.2.25",
     "@oclif/command": "^1",
     "@oclif/config": "^1",
