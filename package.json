@@ -7,17 +7,18 @@
     "peerchat": "./bin/run",
     "pchat": "./bin/run"
   },
-  "resolutions": {
-    "wrtc": "git+https://github.com/dstack-js/node-webrtc.git"
-  },
   "bugs": "https://github.com/dstack-js/chat/issues",
   "dependencies": {
-    "@dstack-js/ipfs": "^0.2.29",
-    "@dstack-js/lib": "^0.2.25",
+    "@dstack-js/ipfs": "^0.2.33",
+    "@dstack-js/lib": "^0.2.33",
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "blessed": "^0.1.81",
     "discord.js": "^13.6.0",
+    "graphql": "^16.3.0",
+    "graphql-request": "^4.0.0",
+    "libp2p-webrtc-star": "0.20.1",
+    "libp2p-websockets": "0.15.0",
     "tslib": "^1",
     "wrtc": "^0.4.7"
   },

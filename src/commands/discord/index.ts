@@ -26,7 +26,7 @@ class DiscordRelay extends Command {
     }
 
     const { stack } = await getStack()
-    const { pubsub } = stack
+    const pubsub = stack.pubsub.create(`chat-${args.room}`)
 
     const client = new Discord.Client({ intents: [Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILDS, Intents.FLAGS.DIRECT_MESSAGES] })
     await client.login(process.env.DISCORD_KEY)

@@ -1,14 +1,17 @@
 import { create } from '@dstack-js/ipfs'
 import { Stack } from '@dstack-js/lib'
+// @ts-expect-error: no types
+import WebRTCStar from 'libp2p-webrtc-star'
+// @ts-expect-error: no types
+import WebSocket from 'libp2p-websockets'
+import { getBootstrapData } from './bootstrap'
 
 const wrtc = require('wrtc')
 
-interface Message {
-  nickname?: string;
-  message: string;
-}
-
 export const getStack = async () => {
+  const bootstrap = await getBootstrapData()
+  console.log(bootstrap)
+
   const ipfs = await create({
     repo: process.env.IPFS_REPO,
     init: {
@@ -22,7 +25,7 @@ export const getStack = async () => {
     },
     config: {
       Addresses: {
-        Swarm: ['/ip4/0.0.0.0/tcp/0', '/dns4/dstack-relay.herokuapp.com/tcp/443/wss/p2p-webrtc-star']
+        Swarm: bootstrap.listen
       },
       Discovery: {
         MDNS: {
@@ -33,11 +36,20 @@ export const getStack = async () => {
           Enabled: true
         }
       },
-      Bootstrap: ['/dns4/dstack-relay.herokuapp.com/tcp/443/wss/p2p-webrtc-star/p2p/QmV2uXBKbii29iJKHKVy8sx5m49qdDTBYNybVoa5uLJtrf']
+      Bootstrap: bootstrap.peers
+    },
+    libp2p: {
+      // @ts-expect-error: incompatible types
+      modules: {
+        transport: [WebRTCStar, WebSocket]
+      },
+      addresses: {
+        listen: bootstrap.listen
+      }
     }
   }, wrtc)
 
-  const stack = await Stack.create('dstack-chat', ipfs)
+  const stack = await Stack.create('dstack', ipfs)
 
-  return { stack: stack as Stack<Message>, ipfs }
+  return { stack, ipfs }
 }

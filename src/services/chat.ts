@@ -3,8 +3,9 @@ import { getStack } from './stack'
 
 export const run = async (room: string, nickname?: string) => {
   const { ipfs, stack } = await getStack()
-  const { id, pubsub } = stack
+  const { id } = await stack.id()
 
+  const pubsub = stack.pubsub.create<{ nickname?: string; message: string }>(`chat-${room}`)
   const screen = blessed.screen({
     smartCSR: true,
     title: `#${room}`
@@ -93,7 +94,7 @@ export const run = async (room: string, nickname?: string) => {
     }
 
     try {
-      await pubsub.publish(room, { nickname, message })
+      await pubsub.publish('message', { nickname, message })
     } catch {
       // error handling
     } finally {
@@ -114,14 +115,14 @@ export const run = async (room: string, nickname?: string) => {
   screen.append(input)
   input.focus()
 
-  await pubsub.subscribe(room, event => {
+  await pubsub.subscribe('message', event => {
     messageList.addItem(`${event.data.nickname ? `${event.data.nickname} (${event.from.slice(-5)})` : event.from.slice(-5)}: ${event.data.message}`)
     messageList.scrollTo(100)
     screen.render()
   })
 
   setInterval(async () => {
-    messageList.setLabel(` Messages #${room} - Peers: ${await pubsub.peers(room)} `)
+    messageList.setLabel(` Messages #${room} - Peers: ${await pubsub.peers('message')} `)
     screen.render()
   }, 1000)
 
