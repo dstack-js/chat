@@ -2,13 +2,6 @@
 # yarn lockfile v1
 
 
-"@achingbrain/electron-fetch@^1.7.2":
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/@achingbrain/electron-fetch/-/electron-fetch-1.7.2.tgz#df48e7e33b217520be1abb5bef151828fef7cf73"
-  integrity sha512-ShX5frO+2OddzRIlUb8D0Ao2eC3uZl910CYnRIPGLLM360vQceeOqpivwNdbry41Ph3MMtLR4RpzGdaADGG8Gg==
-  dependencies:
-    encoding "^0.1.13"
-
 "@ampproject/remapping@^2.0.0":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@ampproject/remapping/-/remapping-2.1.1.tgz#7922fb0817bf3166d8d9e258c57477e3fd1c3610"
@@ -1427,14 +1420,6 @@ any-signal@^1.1.0:
   integrity sha512-Cl08k4xItix3jvu4cxO/dt2rQ6iUAjO66pTyRMub+WL1VXeAyZydCpD8GqWTPKfdL28U0R0UucmQVsUsBnvCmQ==
   dependencies:
     abort-controller "^3.0.0"
-
-any-signal@^2.1.0:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/any-signal/-/any-signal-2.1.2.tgz#8d48270de0605f8b218cf9abe8e9c6a0e7418102"
-  integrity sha512-B+rDnWasMi/eWcajPcCWSlYc7muXOrcYrqgyzcdKisl2H/WTlQ0gip1KyQfr0ZlxJdsuWCj/LWwQm7fhyhRfIQ==
-  dependencies:
-    abort-controller "^3.0.0"
-    native-abort-controller "^1.0.3"
 
 any-signal@^3.0.0:
   version "3.0.0"
@@ -3633,13 +3618,6 @@ globals@^13.6.0, globals@^13.9.0:
   dependencies:
     type-fest "^0.20.2"
 
-globalthis@^1.0.1:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/globalthis/-/globalthis-1.0.2.tgz#2a235d34f4d8036219f7e34929b5de9e18166b8b"
-  integrity sha512-ZQnSFO1la8P7auIOQECnm0sSuoMeaSq0EEdXMBFF2QJO4uNcwbyhSgG3MruWNbFTqCLmxVwGOl7LZ9kASvHdeQ==
-  dependencies:
-    define-properties "^1.1.3"
-
 globby@^10.0.1:
   version "10.0.2"
   resolved "https://registry.yarnpkg.com/globby/-/globby-10.0.2.tgz#277593e745acaa4646c3ab411289ec47a0392543"
@@ -4532,27 +4510,6 @@ ipfs-utils@^3.0.0:
     node-fetch "^2.6.0"
     stream-to-it "^0.2.0"
 
-ipfs-utils@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/ipfs-utils/-/ipfs-utils-4.0.1.tgz#8856ba3ee7251f0a8f08f2f33ca5b62a2691da4d"
-  integrity sha512-6mg+S1sbjj+Ff+uoHOhVeC4myfV2tb2sHcdYwfpJ4ZcBo9WfdxSMnWFLiC5bIqByyJuN/g5aWgz3ozjKDzND1Q==
-  dependencies:
-    "@achingbrain/electron-fetch" "^1.7.2"
-    abort-controller "^3.0.0"
-    any-signal "^2.1.0"
-    buffer "^6.0.1"
-    err-code "^2.0.0"
-    fs-extra "^9.0.1"
-    is-electron "^2.2.0"
-    iso-url "^1.0.0"
-    it-glob "0.0.10"
-    merge-options "^2.0.0"
-    nanoid "^3.1.3"
-    native-abort-controller "0.0.3"
-    native-fetch "^2.0.0"
-    node-fetch "^2.6.0"
-    stream-to-it "^0.2.0"
-
 ipfs-utils@^9.0.1, ipfs-utils@^9.0.2:
   version "9.0.4"
   resolved "https://registry.yarnpkg.com/ipfs-utils/-/ipfs-utils-9.0.4.tgz#364be777e73ac86956b8f7cbee89f3b09510884b"
@@ -4906,7 +4863,7 @@ iso-url@^0.4.7:
   resolved "https://registry.yarnpkg.com/iso-url/-/iso-url-0.4.7.tgz#de7e48120dae46921079fe78f325ac9e9217a385"
   integrity sha512-27fFRDnPAMnHGLq36bWTpKET+eiXct3ENlCcdcMdk+mjXrb2kw3mhBUg1B7ewAC0kVzlOPhADzQgz1SE6Tglog==
 
-iso-url@^1.0.0, iso-url@^1.1.2, iso-url@^1.1.3, iso-url@^1.1.5:
+iso-url@^1.1.2, iso-url@^1.1.3, iso-url@^1.1.5:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/iso-url/-/iso-url-1.2.1.tgz#db96a49d8d9a64a1c889fc07cc525d093afb1811"
   integrity sha512-9JPDgCN4B7QPkLtYAAOrEuAWvP9rWvR5offAr0/SeF046wIkglqH3VXgYYP6NcsKslH80UIVgmPqNe3j7tG2ng==
@@ -4960,14 +4917,6 @@ it-foreach@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/it-foreach/-/it-foreach-0.1.1.tgz#8dce2d16567cfac007977e2daae7699c82c58d70"
   integrity sha512-ZLxL651N5w5SL/EIIcrXELgYrrkuEKj/TErG93C4lr6lNZziKsf338ljSG85PjQfu7Frg/1wESl5pLrPSFXI9g==
-
-it-glob@0.0.10:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/it-glob/-/it-glob-0.0.10.tgz#4defd9286f693847c3ff483d2ff65f22e1359ad8"
-  integrity sha512-p1PR15djgPV7pxdLOW9j4WcJdla8+91rJdUU2hU2Jm68vkxpIEXK55VHBeH8Lvqh2vqLtM83t8q4BuJxue6niA==
-  dependencies:
-    fs-extra "^9.0.1"
-    minimatch "^3.0.4"
 
 it-glob@0.0.8:
   version "0.0.8"
@@ -5140,16 +5089,6 @@ it-to-stream@^1.0.0:
     p-defer "^3.0.0"
     p-fifo "^1.0.0"
     readable-stream "^3.6.0"
-
-it-ws@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/it-ws/-/it-ws-3.0.2.tgz#65223b7bfbe8f8239b75edef4d4a3cd7e330b693"
-  integrity sha512-INZhCXNjd5Xr7mYWtNZQb9y5i6XIsf4CKD4XUXeCD3tbaoIya1bPVtJNP1lN5UVGo6Ql9rAn3WVre/8IKtKShw==
-  dependencies:
-    buffer "^5.6.0"
-    event-iterator "^2.0.0"
-    relative-url "^1.0.2"
-    ws "^7.3.1"
 
 it-ws@^4.0.0:
   version "4.0.0"
@@ -5650,7 +5589,7 @@ libp2p-tcp@^0.17.1:
     multiaddr "^10.0.0"
     stream-to-it "^0.2.2"
 
-libp2p-utils@^0.2.0, libp2p-utils@^0.2.1:
+libp2p-utils@^0.2.0:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/libp2p-utils/-/libp2p-utils-0.2.3.tgz#4eb2a59a9eda342bed73cb94553c87a63c95848a"
   integrity sha512-9BoMCgvJF7LJ+JVMaHtqfCqhZN4i/sx0DrY6lf9U0Rq9uUgQ9qTai2O9LXcfr1LOS3OMMeRLsKk25MMgsf7W3w==
@@ -5735,24 +5674,7 @@ libp2p-webrtc-star@^0.25.0:
     socket.io-client "^4.1.2"
     stream-to-it "^0.2.2"
 
-libp2p-websockets@0.15.0:
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/libp2p-websockets/-/libp2p-websockets-0.15.0.tgz#fcd0ce964f03e1750413bbdc6a609b469c3a51d2"
-  integrity sha512-0mn71JOyO4MO7++sNpNpGQyht1C4JX6ScKqwK+Nod0r4MsQbqxRNp9/5fVZ+pY1oC1qTxkagZ98pfM3m+bob/g==
-  dependencies:
-    abortable-iterator "^3.0.0"
-    class-is "^1.1.0"
-    debug "^4.2.0"
-    err-code "^2.0.3"
-    ipfs-utils "^4.0.1"
-    it-ws "^3.0.2"
-    libp2p-utils "^0.2.1"
-    mafmt "^8.0.1"
-    multiaddr "^8.1.1"
-    multiaddr-to-uri "^6.0.0"
-    p-timeout "^3.2.0"
-
-libp2p-websockets@^0.16.2:
+libp2p-websockets@0.16.2, libp2p-websockets@^0.16.2:
   version "0.16.2"
   resolved "https://registry.yarnpkg.com/libp2p-websockets/-/libp2p-websockets-0.16.2.tgz#4eca653b3ae9593d3dd5dd467a58aed03cc92e3a"
   integrity sha512-QGfo8jX1Ks16yi8C67CCyMW7k9cfCYiQ0lzKVJBud0fV3ymbMO2L8gzU6iXUUZTHILo8ka26zKhwQ4lmUMI+nA==
@@ -5998,7 +5920,7 @@ mafmt@^10.0.0:
   dependencies:
     multiaddr "^10.0.0"
 
-mafmt@^8.0.0, mafmt@^8.0.1:
+mafmt@^8.0.0:
   version "8.0.4"
   resolved "https://registry.yarnpkg.com/mafmt/-/mafmt-8.0.4.tgz#5b158a28bd800fb8d0e5c28bd9ee15120bed2a61"
   integrity sha512-wwZ5+PU0vQw10kwQRyZin1Z0dqVOp0BnYlX1xvXHS2fmLwrrQCfU1+3tlW5MRcihUwGz1virnVhbRAU1biKfiw==
@@ -6198,13 +6120,6 @@ ms@^2.1.1:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
-multiaddr-to-uri@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/multiaddr-to-uri/-/multiaddr-to-uri-6.0.0.tgz#8f08a75c6eeb2370d5d24b77b8413e3f0fa9bcc0"
-  integrity sha512-OjpkVHOXEmIKMO8WChzzQ7aZQcSQX8squxmvtDbRpy7/QNmJ3Z7jv6qyD74C28QtaeNie8O8ngW2AkeiMmKP7A==
-  dependencies:
-    multiaddr "^8.0.0"
-
 multiaddr-to-uri@^8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/multiaddr-to-uri/-/multiaddr-to-uri-8.0.0.tgz#65efe4b1f9de5f6b681aa42ff36a7c8db7625e58"
@@ -6224,7 +6139,7 @@ multiaddr@^10.0.0, multiaddr@^10.0.1:
     uint8arrays "^3.0.0"
     varint "^6.0.0"
 
-multiaddr@^8.0.0, multiaddr@^8.1.1:
+multiaddr@^8.0.0:
   version "8.1.2"
   resolved "https://registry.yarnpkg.com/multiaddr/-/multiaddr-8.1.2.tgz#74060ff8636ba1c01b2cf0ffd53950b852fa9b1f"
   integrity sha512-r13IzW8+Sv9zab9Gt8RPMIN2WkptIPq99EpAzg4IbJ/zTELhiEwXWr9bAmEatSCI4j/LSA6ESJzvz95JZ+ZYXQ==
@@ -6341,25 +6256,6 @@ nat-api@^0.3.1:
     request "^2.88.2"
     unordered-array-remove "^1.0.2"
     xml2js "^0.1.0"
-
-native-abort-controller@0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/native-abort-controller/-/native-abort-controller-0.0.3.tgz#4c528a6c9c7d3eafefdc2c196ac9deb1a5edf2f8"
-  integrity sha512-YIxU5nWqSHG1Xbu3eOu3pdFRD882ivQpIcu6AiPVe2oSVoRbfYW63DVkZm3g1gHiMtZSvZzF6THSzTGEBYl8YA==
-  dependencies:
-    globalthis "^1.0.1"
-
-native-abort-controller@^1.0.3:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/native-abort-controller/-/native-abort-controller-1.0.4.tgz#39920155cc0c18209ff93af5bc90be856143f251"
-  integrity sha512-zp8yev7nxczDJMoP6pDxyD20IU0T22eX8VwN2ztDccKvSZhRaV33yP1BGwKSZfXuqWUzsXopVFjBdau9OOAwMQ==
-
-native-fetch@^2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/native-fetch/-/native-fetch-2.0.1.tgz#319d53741a7040def92d5dc8ea5fe9416b1fad89"
-  integrity sha512-gv4Bea+ga9QdXINurpkEqun3ap3vnB+WYoe4c8ddqUYEH7B2h6iD39RF8uVN7OwmSfMY3RDxkvBnoI4e2/vLXQ==
-  dependencies:
-    globalthis "^1.0.1"
 
 native-fetch@^3.0.0:
   version "3.0.0"
@@ -7420,11 +7316,6 @@ registry-url@^5.0.0:
   integrity sha512-8acYXXTI0AkQv6RAOjE3vOaIXZkT9wo4LOFbBKYQEEnnMNBpKqdUrI6S4NT0KPIo/WVvJ5tE/X5LF/TQUf0ekw==
   dependencies:
     rc "^1.2.8"
-
-relative-url@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/relative-url/-/relative-url-1.0.2.tgz#d21c52a72d6061018bcee9f9c9fc106bf7d65287"
-  integrity sha1-0hxSpy1gYQGLzun5yfwQa/fWUoc=
 
 repeating@^2.0.0:
   version "2.0.1"
