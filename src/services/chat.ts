@@ -84,8 +84,12 @@ export const run = async (room: string, nickname?: string) => {
     if (message.startsWith('/peers')) {
       const peers = await stack.peers()
 
-      for (const peer of peers) {
-        messageList.addItem(`dstack: ${peer.id}`)
+      if (peers.length === 0) {
+        messageList.addItem('dstack: no peers')
+      } else {
+        for (const peer of peers) {
+          messageList.addItem(`dstack: ${peer.id}`)
+        }
       }
 
       input.clearValue()
