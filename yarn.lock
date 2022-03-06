@@ -265,10 +265,10 @@
     ipfs-core "^0.14.0"
     tslib "^2.3.1"
 
-"@dstack-js/lib@^0.2.33":
-  version "0.2.33"
-  resolved "https://registry.yarnpkg.com/@dstack-js/lib/-/lib-0.2.33.tgz#5b0c35f81991204128a1faa2e2d3d33ba2e88926"
-  integrity sha512-q5KSC3hW0NbrA9R+d7EWmrcYGcfWfaNRvqeGkgK1LAsgZc+3GImzRBC5LeBtz4RRQWUGCsWDVMdj/pJ3qV9saA==
+"@dstack-js/lib@^0.2.34":
+  version "0.2.40"
+  resolved "https://registry.yarnpkg.com/@dstack-js/lib/-/lib-0.2.40.tgz#e7309635e9c4aea7334c127cb4a8720ae0d24b3b"
+  integrity sha512-dVSRjVux6u5qTBVK2pkHqFeO8rkvkWBg/KE9FGC9cBvT1dVWtsSm6tbpj7zERLCUu95FCG4WgajEeLpc6tu0tg==
   dependencies:
     buffer "^6.0.3"
     events "^3.3.0"
