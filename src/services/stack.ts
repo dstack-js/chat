@@ -1,12 +1,12 @@
 import { create } from '@dstack-js/ipfs'
 import { Stack } from '@dstack-js/lib'
 // @ts-expect-error: no types
-import WebRTCStar from 'libp2p-webrtc-star'
+import { WebRTCStar } from 'libp2p-webrtc-star'
 // @ts-expect-error: no types
 import WebSocket from 'libp2p-websockets'
 import { getBootstrapData } from './bootstrap'
 
-const wrtc = require('wrtc')
+const wrtc = require('@dstack-js/wrtc')
 
 export const getStack = async () => {
   const bootstrap = await getBootstrapData()

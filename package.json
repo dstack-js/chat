@@ -11,6 +11,7 @@
   "dependencies": {
     "@dstack-js/ipfs": "^0.2.33",
     "@dstack-js/lib": "^0.2.33",
+    "@dstack-js/wrtc": "0.4.8",
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "blessed": "^0.1.81",
@@ -18,9 +19,13 @@
     "graphql": "^16.3.0",
     "graphql-request": "^4.0.0",
     "libp2p-webrtc-star": "0.20.1",
-    "libp2p-websockets": "0.15.0",
-    "tslib": "^1",
-    "wrtc": "^0.4.7"
+    "libp2p-websockets": "^0.16.2",
+    "tslib": "^1"
+  },
+  "resolutions": {
+    "wrtc": "https://github.com/dstack-js/node-webrtc",
+    "socket.io-client": "^4.4.1",
+    "electron": "^17.1.2"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1",
