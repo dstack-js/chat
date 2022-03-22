@@ -32,7 +32,7 @@ $ npm install -g peerchat
 $ peerchat COMMAND
 running command...
 $ peerchat (-v|--version|version)
-peerchat/0.1.4 darwin-x64 node-v16.13.2
+peerchat/0.1.5 darwin-arm64 node-v17.7.2
 $ peerchat --help [COMMAND]
 USAGE
   $ peerchat COMMAND
@@ -66,7 +66,7 @@ EXAMPLES
   $ peerchat dstack myCoolNickname
 ```
 
-_See code: [src/commands/index.ts](https://github.com/dstack-js/chat/blob/v0.1.4/src/commands/index.ts)_
+_See code: [src/commands/index.ts](https://github.com/dstack-js/chat/blob/v0.1.5/src/commands/index.ts)_
 
 ## `peerchat discord [ROOM]`
 
@@ -88,7 +88,7 @@ EXAMPLES
   $ CHANNEL_ID="<discord channel id>" DISCORD_KEY="<discord bot token>" peerchat discord dstack
 ```
 
-_See code: [src/commands/discord/index.ts](https://github.com/dstack-js/chat/blob/v0.1.4/src/commands/discord/index.ts)_
+_See code: [src/commands/discord/index.ts](https://github.com/dstack-js/chat/blob/v0.1.5/src/commands/discord/index.ts)_
 
 ## `peerchat help [COMMAND]`
 
@@ -105,5 +105,5 @@ OPTIONS
   -n, --nested-commands  Include all nested commands in the output.
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.1.11/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.1.12/src/commands/help.ts)_
 <!-- commandsstop -->
