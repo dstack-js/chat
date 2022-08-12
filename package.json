@@ -9,7 +9,7 @@
   },
   "bugs": "https://github.com/dstack-js/chat/issues",
   "dependencies": {
-    "@dstack-js/ipfs": "^0.2.33",
+    "@dstack-js/ipfs": "^0.2.43",
     "@dstack-js/lib": "^0.2.33",
     "@dstack-js/wrtc": "0.4.8",
     "@oclif/command": "^1",
